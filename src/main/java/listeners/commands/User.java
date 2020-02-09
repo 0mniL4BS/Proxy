@@ -102,6 +102,7 @@ public class User extends ListenerAdapter {
 
                 else {
 
+                    event.getChannel().sendTyping().queue();
                     event.getChannel().sendMessage("Please mention a member (only one).").queueAfter(300,
                             TimeUnit.MILLISECONDS);
                 }
@@ -126,6 +127,7 @@ public class User extends ListenerAdapter {
 
                 else {
 
+                    event.getChannel().sendTyping().queue();
                     event.getChannel().sendMessage("Please mention a text channel (only one).").queueAfter(300,
                             TimeUnit.MILLISECONDS);
                 }
